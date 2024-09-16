@@ -1,0 +1,344 @@
+/* Global reset to remove margin, padding, and set box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the height of the html and body to ensure proper layout and scrolling */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("/images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #333;
+    line-height: 1.6;  
+    display: flex; 
+    flex-direction: column;
+    background-attachment: fixed; /* Fixed background for parallax effect */
+    min-height: 100%; /* Body extends beyond viewport */
+}
+
+/* Styling for the navigation bar */
+nav {
+    background: linear-gradient(to right, #ffffff00, #0199ff00);
+    display: flex;
+    justify-content: right;
+    padding: 1rem;
+}
+
+/* Styling for navigation links */
+nav a {
+    color: #ffffff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.7rem;
+}
+
+/* Styling for header containing the logo */
+header {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+header .logo img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Flex containers for main content sections */
+.content, .phrase {
+    width: 100%;
+}
+
+/* Main content section */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0); /* Slightly dark background for contrast */
+}
+
+/* Heading and text within the content section */
+.text h4 {
+    font-size: 5.0rem;
+    color: #00b7ff;
+}
+
+.text h2 {
+    font-size: 4.0rem;
+    color: #020202;
+}
+
+/* Section for additional phrases or text */
+.phrase {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0); /* Slightly dark background */
+}
+
+.phrase h3 {
+    font-size: 2.5rem;
+    color: #030303;
+}
+
+/* Image gallery section */
+.image-gallery {
+    padding: 2rem;
+    overflow-x: auto; /* Horizontal scrolling for the gallery */
+}
+
+.image-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 200px; /* Limit image height */
+    object-fit: cover;
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* Hide the scrollbar on webkit browsers (optional) */
+.image-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+/* Centered button styling */
+.centered-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-button img {
+    max-width: 500px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.centered-button img:hover {
+    transform: scale(1.1); /* Zoom on hover */
+}
+
+/* Services section styling */
+.services-section {
+    padding: 50px;
+    color: white;
+}
+
+.services-section h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: rgb(1, 72, 153);
+}
+
+/* Individual service box */
+.service {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.055);
+    border-radius: 10px;
+}
+
+.service h2 {
+    color: #024881;
+    font-size: 3.0em;
+}
+
+.service p {
+    font-size: 2.5em;
+    text-align: justify;
+    color: #000000;
+}
+
+/* Styling for images within service sections */
+.service-image img {
+    max-width: 800px; /* Image width constraint */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Text next to images in the service section */
+.service-text {
+    flex: 1; /* Fill available space */
+    color: rgb(0, 0, 0);
+    padding-right: 20px; /* Space between text and image */
+}
+
+.image-hover-popout {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.image-hover-popout:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+}
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.027); /* Slightly dark background for contrast */
+    color: rgb(0, 0, 0);
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.048); /* Darker background for the form area */
+    border-radius: 10px;
+}
+
+.contact-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-content p {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-content label {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.contact-content input, 
+.contact-content textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-content button {
+    padding: 0.75rem;
+    background: #00b7ff; /* Blue background for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-content button:hover {
+    background: #0096d6; /* Slightly darker blue on hover */
+}
+
+.contact-details {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.contact-details h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-details p {
+    font-size: 2.0rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-details a {
+    color: #004d6b; /* Link color for email and phone */
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Add this CSS to your stylesheet */
+
+  
+  nav {
+    text-align: right; /* Aligns the nav to the right */
+    display: flex;
+    justify-content: right;
+  }
+  
+  nav a {
+    margin-left: 20px; /* Space between links */
+    text-decoration: none; /* Removes underline from links */
+    color: #014268; /* Link color */
+    font-size: 3.0rem;
+  }
+  
+  nav a:hover {
+    color: #01bdc4; /* Change color on hover */
+  }
+  
+  .contact-section {
+    padding: 20px;
+  }
+  
+  .contact-content, .contact-details {
+    margin-bottom: 20px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #007BFF; /* Button color */
+    color: #fff; /* Button text color */
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #0056b3; /* Button hover color */
+  }
+
+  /* Toast Styles */
+.toast {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745; /* Green for success */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.toast p {
+    margin: 0;
+}
